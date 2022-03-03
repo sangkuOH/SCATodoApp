@@ -44,12 +44,13 @@ let todoReducer  = Reducer<Todo, TodoAction, TodoEnvironment> { state, action, e
 enum AppAction: BindableAction, Equatable {
 	case binding(BindingAction<AppState>)
 	case todo(index: Int, action: TodoAction)
+	case todoDelayCompleted
 	case addTodo(String)
 	case deleteTodo(IndexSet)
 }
 
 struct AppEnvironment {
-	
+	var uuid: () -> UUID
 }
 
 let appReducer = Reducer<AppState, AppAction, AppEnvironment>
@@ -64,13 +65,31 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>
 			case .binding:
 				return .none
 			case .addTodo(let text):
-				state.todos.insert(Todo(id: UUID(), description: text), at: 0)
+				state.todos.insert(Todo(id: environment.uuid(), description: text), at: 0)
 				state.text = ""
 				return .none
 			case .deleteTodo(let indexSet):
 				state.todos.remove(atOffsets: indexSet)
 				return .none
+			case .todo(index: _, action: .checkboxTapped):
+				struct CancelDelayId: Hashable {}
+				
+				return .concatenate(
+						Effect(value: AppAction.todoDelayCompleted)
+							.delay(for: 1, scheduler: DispatchQueue.main)
+							.eraseToEffect()
+							.cancellable(id: CancelDelayId(), cancelInFlight: true)
+				)
 			case .todo(let index, let action):
+				return .none
+			case .todoDelayCompleted:
+				state.todos = state.todos
+					.enumerated()
+					.sorted { lhs, rhs in
+						(!lhs.element.isComplete && rhs.element.isComplete)
+						|| lhs.offset < rhs.offset
+					}
+					.map(\.element)
 				return .none
 			}
 		}
@@ -87,7 +106,7 @@ struct ContentView: View {
 			self.store = Store(
 				initialState: AppState(todos: [Todo]()),
 				reducer: appReducer,
-				environment: AppEnvironment()
+				environment: AppEnvironment(uuid: UUID.init)
 			)
 		}
 	}
@@ -171,7 +190,7 @@ struct ContentView_Previews: PreviewProvider {
 					]
 				),
 				reducer: appReducer,
-				environment: AppEnvironment()
+				environment: AppEnvironment(uuid: UUID.init)
 			)
 		)
 	}

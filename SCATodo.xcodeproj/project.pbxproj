@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		ADB43D4B27D05C8600773D51 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D4A27D05C8600773D51 /* Tests_iOS.swift */; };
-		ADB43D4D27D05C8600773D51 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D4C27D05C8600773D51 /* Tests_iOSLaunchTests.swift */; };
 		ADB43D5727D05C8600773D51 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D5627D05C8600773D51 /* Tests_macOS.swift */; };
 		ADB43D5927D05C8600773D51 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D5827D05C8600773D51 /* Tests_macOSLaunchTests.swift */; };
 		ADB43D5A27D05C8600773D51 /* SCATodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3227D05C8500773D51 /* SCATodoApp.swift */; };
@@ -17,7 +16,11 @@
 		ADB43D5D27D05C8600773D51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3327D05C8500773D51 /* ContentView.swift */; };
 		ADB43D5E27D05C8600773D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB43D3427D05C8600773D51 /* Assets.xcassets */; };
 		ADB43D5F27D05C8600773D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB43D3427D05C8600773D51 /* Assets.xcassets */; };
-		ADB43D7027D05E2D00773D51 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = ADB43D6F27D05E2D00773D51 /* ComposableArchitecture */; };
+		ADEEA8F027D0AC8C00124FF1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = ADEEA8EF27D0AC8C00124FF1 /* ComposableArchitecture */; };
+		ADEEA8F327D0AFFC00124FF1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = ADEEA8F227D0AFFC00124FF1 /* ComposableArchitecture */; };
+		ADEEA8F427D0B03D00124FF1 /* SCATodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3227D05C8500773D51 /* SCATodoApp.swift */; };
+		ADEEA8F527D0B04100124FF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3327D05C8500773D51 /* ContentView.swift */; };
+		ADEEA8F627D0B04700124FF1 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3427D05C8600773D51 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB43D7027D05E2D00773D51 /* ComposableArchitecture in Frameworks */,
+				ADEEA8F027D0AC8C00124FF1 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADEEA8F327D0AFFC00124FF1 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 				ADB43D4927D05C8600773D51 /* Tests iOS */,
 				ADB43D5527D05C8600773D51 /* Tests macOS */,
 				ADB43D3A27D05C8600773D51 /* Products */,
+				ADEEA8F127D0AFFC00124FF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +148,13 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		ADEEA8F127D0AFFC00124FF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,7 +172,7 @@
 			);
 			name = "SCATodo (iOS)";
 			packageProductDependencies = (
-				ADB43D6F27D05E2D00773D51 /* ComposableArchitecture */,
+				ADEEA8EF27D0AC8C00124FF1 /* ComposableArchitecture */,
 			);
 			productName = "SCATodo (iOS)";
 			productReference = ADB43D3927D05C8600773D51 /* SCATodo.app */;
@@ -197,6 +209,9 @@
 				ADB43D4827D05C8600773D51 /* PBXTargetDependency */,
 			);
 			name = "Tests iOS";
+			packageProductDependencies = (
+				ADEEA8F227D0AFFC00124FF1 /* ComposableArchitecture */,
+			);
 			productName = "Tests iOS";
 			productReference = ADB43D4627D05C8600773D51 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -255,7 +270,7 @@
 			);
 			mainGroup = ADB43D2C27D05C8500773D51;
 			packageReferences = (
-				ADB43D6E27D05E2D00773D51 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				ADEEA8EE27D0AC8C00124FF1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = ADB43D3A27D05C8600773D51 /* Products */;
 			projectDirPath = "";
@@ -325,7 +340,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB43D4D27D05C8600773D51 /* Tests_iOSLaunchTests.swift in Sources */,
+				ADEEA8F627D0B04700124FF1 /* Assets.xcassets in Sources */,
+				ADEEA8F527D0B04100124FF1 /* ContentView.swift in Sources */,
+				ADEEA8F427D0B03D00124FF1 /* SCATodoApp.swift in Sources */,
 				ADB43D4B27D05C8600773D51 /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,20 +730,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ADB43D6E27D05E2D00773D51 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		ADEEA8EE27D0AC8C00124FF1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				kind = exactVersion;
-				version = 0.33.1;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ADB43D6F27D05E2D00773D51 /* ComposableArchitecture */ = {
+		ADEEA8EF27D0AC8C00124FF1 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ADB43D6E27D05E2D00773D51 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = ADEEA8EE27D0AC8C00124FF1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		ADEEA8F227D0AFFC00124FF1 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADEEA8EE27D0AC8C00124FF1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
