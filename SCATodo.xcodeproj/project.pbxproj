@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADB43D4B27D05C8600773D51 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D4A27D05C8600773D51 /* Tests_iOS.swift */; };
+		ADB43D4D27D05C8600773D51 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D4C27D05C8600773D51 /* Tests_iOSLaunchTests.swift */; };
+		ADB43D5727D05C8600773D51 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D5627D05C8600773D51 /* Tests_macOS.swift */; };
+		ADB43D5927D05C8600773D51 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D5827D05C8600773D51 /* Tests_macOSLaunchTests.swift */; };
+		ADB43D5A27D05C8600773D51 /* SCATodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3227D05C8500773D51 /* SCATodoApp.swift */; };
+		ADB43D5B27D05C8600773D51 /* SCATodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3227D05C8500773D51 /* SCATodoApp.swift */; };
+		ADB43D5C27D05C8600773D51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3327D05C8500773D51 /* ContentView.swift */; };
+		ADB43D5D27D05C8600773D51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB43D3327D05C8500773D51 /* ContentView.swift */; };
+		ADB43D5E27D05C8600773D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB43D3427D05C8600773D51 /* Assets.xcassets */; };
+		ADB43D5F27D05C8600773D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB43D3427D05C8600773D51 /* Assets.xcassets */; };
+		ADB43D7027D05E2D00773D51 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = ADB43D6F27D05E2D00773D51 /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADB43D4727D05C8600773D51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADB43D2D27D05C8500773D51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADB43D3827D05C8600773D51;
+			remoteInfo = "SCATodo (iOS)";
+		};
+		ADB43D5327D05C8600773D51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADB43D2D27D05C8500773D51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADB43D3E27D05C8600773D51;
+			remoteInfo = "SCATodo (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADB43D3227D05C8500773D51 /* SCATodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCATodoApp.swift; sourceTree = "<group>"; };
+		ADB43D3327D05C8500773D51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADB43D3427D05C8600773D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADB43D3927D05C8600773D51 /* SCATodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCATodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB43D3F27D05C8600773D51 /* SCATodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCATodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB43D4127D05C8600773D51 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		ADB43D4627D05C8600773D51 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB43D4A27D05C8600773D51 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		ADB43D4C27D05C8600773D51 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		ADB43D5227D05C8600773D51 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB43D5627D05C8600773D51 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		ADB43D5827D05C8600773D51 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADB43D3627D05C8600773D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D7027D05E2D00773D51 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D3C27D05C8600773D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D4327D05C8600773D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D4F27D05C8600773D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADB43D2C27D05C8500773D51 = {
+			isa = PBXGroup;
+			children = (
+				ADB43D3127D05C8500773D51 /* Shared */,
+				ADB43D4027D05C8600773D51 /* macOS */,
+				ADB43D4927D05C8600773D51 /* Tests iOS */,
+				ADB43D5527D05C8600773D51 /* Tests macOS */,
+				ADB43D3A27D05C8600773D51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADB43D3127D05C8500773D51 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ADB43D3227D05C8500773D51 /* SCATodoApp.swift */,
+				ADB43D3327D05C8500773D51 /* ContentView.swift */,
+				ADB43D3427D05C8600773D51 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		ADB43D3A27D05C8600773D51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADB43D3927D05C8600773D51 /* SCATodo.app */,
+				ADB43D3F27D05C8600773D51 /* SCATodo.app */,
+				ADB43D4627D05C8600773D51 /* Tests iOS.xctest */,
+				ADB43D5227D05C8600773D51 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADB43D4027D05C8600773D51 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				ADB43D4127D05C8600773D51 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		ADB43D4927D05C8600773D51 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ADB43D4A27D05C8600773D51 /* Tests_iOS.swift */,
+				ADB43D4C27D05C8600773D51 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		ADB43D5527D05C8600773D51 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				ADB43D5627D05C8600773D51 /* Tests_macOS.swift */,
+				ADB43D5827D05C8600773D51 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADB43D3827D05C8600773D51 /* SCATodo (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADB43D6227D05C8600773D51 /* Build configuration list for PBXNativeTarget "SCATodo (iOS)" */;
+			buildPhases = (
+				ADB43D3527D05C8600773D51 /* Sources */,
+				ADB43D3627D05C8600773D51 /* Frameworks */,
+				ADB43D3727D05C8600773D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SCATodo (iOS)";
+			packageProductDependencies = (
+				ADB43D6F27D05E2D00773D51 /* ComposableArchitecture */,
+			);
+			productName = "SCATodo (iOS)";
+			productReference = ADB43D3927D05C8600773D51 /* SCATodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADB43D3E27D05C8600773D51 /* SCATodo (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADB43D6527D05C8600773D51 /* Build configuration list for PBXNativeTarget "SCATodo (macOS)" */;
+			buildPhases = (
+				ADB43D3B27D05C8600773D51 /* Sources */,
+				ADB43D3C27D05C8600773D51 /* Frameworks */,
+				ADB43D3D27D05C8600773D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SCATodo (macOS)";
+			productName = "SCATodo (macOS)";
+			productReference = ADB43D3F27D05C8600773D51 /* SCATodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADB43D4527D05C8600773D51 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADB43D6827D05C8600773D51 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				ADB43D4227D05C8600773D51 /* Sources */,
+				ADB43D4327D05C8600773D51 /* Frameworks */,
+				ADB43D4427D05C8600773D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADB43D4827D05C8600773D51 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = ADB43D4627D05C8600773D51 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		ADB43D5127D05C8600773D51 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADB43D6B27D05C8600773D51 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				ADB43D4E27D05C8600773D51 /* Sources */,
+				ADB43D4F27D05C8600773D51 /* Frameworks */,
+				ADB43D5027D05C8600773D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADB43D5427D05C8600773D51 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = ADB43D5227D05C8600773D51 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADB43D2D27D05C8500773D51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					ADB43D3827D05C8600773D51 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					ADB43D3E27D05C8600773D51 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					ADB43D4527D05C8600773D51 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = ADB43D3827D05C8600773D51;
+					};
+					ADB43D5127D05C8600773D51 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = ADB43D3E27D05C8600773D51;
+					};
+				};
+			};
+			buildConfigurationList = ADB43D3027D05C8500773D51 /* Build configuration list for PBXProject "SCATodo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADB43D2C27D05C8500773D51;
+			packageReferences = (
+				ADB43D6E27D05E2D00773D51 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = ADB43D3A27D05C8600773D51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADB43D3827D05C8600773D51 /* SCATodo (iOS) */,
+				ADB43D3E27D05C8600773D51 /* SCATodo (macOS) */,
+				ADB43D4527D05C8600773D51 /* Tests iOS */,
+				ADB43D5127D05C8600773D51 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADB43D3727D05C8600773D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D5E27D05C8600773D51 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D3D27D05C8600773D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D5F27D05C8600773D51 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D4427D05C8600773D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D5027D05C8600773D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADB43D3527D05C8600773D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D5C27D05C8600773D51 /* ContentView.swift in Sources */,
+				ADB43D5A27D05C8600773D51 /* SCATodoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D3B27D05C8600773D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D5D27D05C8600773D51 /* ContentView.swift in Sources */,
+				ADB43D5B27D05C8600773D51 /* SCATodoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D4227D05C8600773D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D4D27D05C8600773D51 /* Tests_iOSLaunchTests.swift in Sources */,
+				ADB43D4B27D05C8600773D51 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADB43D4E27D05C8600773D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB43D5927D05C8600773D51 /* Tests_macOSLaunchTests.swift in Sources */,
+				ADB43D5727D05C8600773D51 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADB43D4827D05C8600773D51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADB43D3827D05C8600773D51 /* SCATodo (iOS) */;
+			targetProxy = ADB43D4727D05C8600773D51 /* PBXContainerItemProxy */;
+		};
+		ADB43D5427D05C8600773D51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADB43D3E27D05C8600773D51 /* SCATodo (macOS) */;
+			targetProxy = ADB43D5327D05C8600773D51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ADB43D6027D05C8600773D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADB43D6127D05C8600773D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ADB43D6327D05C8600773D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = togi.SCATodo;
+				PRODUCT_NAME = SCATodo;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADB43D6427D05C8600773D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = togi.SCATodo;
+				PRODUCT_NAME = SCATodo;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADB43D6627D05C8600773D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = togi.SCATodo;
+				PRODUCT_NAME = SCATodo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ADB43D6727D05C8600773D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = togi.SCATodo;
+				PRODUCT_NAME = SCATodo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ADB43D6927D05C8600773D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "togi.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SCATodo (iOS)";
+			};
+			name = Debug;
+		};
+		ADB43D6A27D05C8600773D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "togi.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SCATodo (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADB43D6C27D05C8600773D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "togi.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "SCATodo (macOS)";
+			};
+			name = Debug;
+		};
+		ADB43D6D27D05C8600773D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75P8DRATKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "togi.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "SCATodo (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADB43D3027D05C8500773D51 /* Build configuration list for PBXProject "SCATodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB43D6027D05C8600773D51 /* Debug */,
+				ADB43D6127D05C8600773D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADB43D6227D05C8600773D51 /* Build configuration list for PBXNativeTarget "SCATodo (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB43D6327D05C8600773D51 /* Debug */,
+				ADB43D6427D05C8600773D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADB43D6527D05C8600773D51 /* Build configuration list for PBXNativeTarget "SCATodo (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB43D6627D05C8600773D51 /* Debug */,
+				ADB43D6727D05C8600773D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADB43D6827D05C8600773D51 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB43D6927D05C8600773D51 /* Debug */,
+				ADB43D6A27D05C8600773D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADB43D6B27D05C8600773D51 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADB43D6C27D05C8600773D51 /* Debug */,
+				ADB43D6D27D05C8600773D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ADB43D6E27D05E2D00773D51 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 0.33.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ADB43D6F27D05E2D00773D51 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADB43D6E27D05E2D00773D51 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = ADB43D2D27D05C8500773D51 /* Project object */;
+}
