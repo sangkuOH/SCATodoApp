@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import ComposableArchitecture
 import IdentifiedCollections
 
@@ -51,6 +52,7 @@ enum AppAction: BindableAction, Equatable {
 
 struct AppEnvironment {
 	var uuid: () -> UUID
+	var mainQueue: AnySchedulerOf<DispatchQueue>
 }
 
 let appReducer = Reducer<AppState, AppAction, AppEnvironment>
@@ -76,7 +78,8 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>
 				
 				return .concatenate(
 						Effect(value: AppAction.todoDelayCompleted)
-							.delay(for: 1, scheduler: DispatchQueue.main)
+//							.debounce(id: CancelDelayId(), for: 1, scheduler: environment.mainQueue)
+							.delay(for: 1, scheduler: environment.mainQueue)
 							.eraseToEffect()
 							.cancellable(id: CancelDelayId(), cancelInFlight: true)
 				)
@@ -106,7 +109,10 @@ struct ContentView: View {
 			self.store = Store(
 				initialState: AppState(todos: [Todo]()),
 				reducer: appReducer,
-				environment: AppEnvironment(uuid: UUID.init)
+				environment: AppEnvironment(
+					uuid: UUID.init,
+					mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+				)
 			)
 		}
 	}
@@ -190,7 +196,10 @@ struct ContentView_Previews: PreviewProvider {
 					]
 				),
 				reducer: appReducer,
-				environment: AppEnvironment(uuid: UUID.init)
+				environment: AppEnvironment(
+					uuid: UUID.init,
+					mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+				)
 			)
 		)
 	}
