@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import IdentifiedCollections
 
 
 struct Todo: Equatable, Identifiable {
@@ -20,44 +21,61 @@ struct AppState: Equatable {
 	@BindableState var todos: [Todo] = []
 }
 
+enum TodoAction: Equatable {
+	case checkboxTapped
+	case textFieldChanged(String)
+}
+
+struct TodoEnvironment {
+}
+
+
+let todoReducer  = Reducer<Todo, TodoAction, TodoEnvironment> { state, action, environment in
+	switch action {
+	case .checkboxTapped:
+		state.isComplete.toggle()
+		return .none
+	case .textFieldChanged(let text):
+		state.description = text
+		return .none
+	}
+}
+
 enum AppAction: BindableAction, Equatable {
 	case binding(BindingAction<AppState>)
-	case appendTodo(text: String)
-	case deleteTodo(offset: IndexSet)
-	case todoCheckboxTapped(index: Int)
-	case todoTextFieldChanged(index: Int, text: String)
+	case todo(index: Int, action: TodoAction)
+	case addTodo(String)
+	case deleteTodo(IndexSet)
 }
 
 struct AppEnvironment {
 	
 }
 
-let appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, action, environment in
-	switch action {
-	case .appendTodo(let text):
-		state.todos.append(
-			Todo(
-				id: UUID(),
-				description: text
-			)
-		)
-		state.text = ""
-		return .none
-	case .deleteTodo(let offset):
-		state.todos.remove(atOffsets: offset)
-		return .none
-	case .todoCheckboxTapped(let index):
-		state.todos[index].isComplete.toggle()
-		return .none
-	case .todoTextFieldChanged(let index, let text):
-		state.todos[index].description = text
-		return .none
-	case .binding:
-		return .none
-	}
-}
+let appReducer = Reducer<AppState, AppAction, AppEnvironment>
+	.combine(
+		todoReducer.forEach(
+			state: \AppState.todos,
+			action: /AppAction.todo(index:action:),
+			environment: {_ in TodoEnvironment() }
+		),
+		Reducer {state, action, environment in
+			switch action {
+			case .binding:
+				return .none
+			case .addTodo(let text):
+				state.todos.insert(Todo(id: UUID(), description: text), at: 0)
+				state.text = ""
+				return .none
+			case .deleteTodo(let indexSet):
+				state.todos.remove(atOffsets: indexSet)
+				return .none
+			case .todo(let index, let action):
+				return .none
+			}
+		}
+	)
 	.binding()
-//	.debug()
 
 struct ContentView: View {
 	let store: Store<AppState, AppAction>
@@ -80,34 +98,51 @@ struct ContentView: View {
 				VStack {
 					TextField("todos..", text: viewStore.binding(\.$text))
 						.onSubmit {
-							viewStore.send(.appendTodo(text: viewStore.text))
+							viewStore.send(.addTodo(viewStore.text))
 						}
 						.textFieldStyle(.roundedBorder)
 						.padding()
 					
 					List {
-						ForEach(Array(viewStore.todos.enumerated()), id: \.element.id) { index, todo in
-							HStack {
-								Button {
-									viewStore.send(.todoCheckboxTapped(index: index))
-								} label: {
-									Image(systemName: todo.isComplete ? "checkmark.circle.fill" : "circlebadge")
-								}
-								.buttonStyle(.plain)
-								TextField(
-									"untitled todo",
-									text: viewStore.binding(\.$todos[index].description)
-								)
-							}
-							.foregroundColor(todo.isComplete ? .gray : nil)
-						}
+						ForEachStore(
+							self.store.scope(
+							state: \.todos,
+							action: AppAction.todo(index:action:)
+						),
+							content: TodoView.init(store:)
+						)
 						.onDelete { offset in
-							viewStore.send(.deleteTodo(offset: offset))
+							viewStore.send(.deleteTodo(offset))
 						}
 					}
 				}
 				.navigationTitle("Todos")
 			}
+		}
+	}
+}
+
+struct TodoView: View {
+	let store: Store<Todo, TodoAction>
+	
+	var body: some View {
+		WithViewStore(store) { todoViewStore in
+			HStack {
+				Button {
+					todoViewStore.send(.checkboxTapped)
+				} label: {
+					Image(systemName: todoViewStore.isComplete ? "checkmark.circle.fill" : "circlebadge")
+				}
+				.buttonStyle(.plain)
+				TextField(
+					"untitled todo",
+					text: todoViewStore.binding(
+						get: \.description,
+						send: TodoAction.textFieldChanged
+					)
+				)
+			}
+			.foregroundColor(todoViewStore.isComplete ? .gray : nil)
 		}
 	}
 }
